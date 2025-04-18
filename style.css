@@ -1394,3 +1394,339 @@ footer {
   cursor: pointer;
   transition: var(--transition);
 }
+.search-box button:hover {
+  background-color: var(--primary-hover);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 180px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  font-size: 0.875rem;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 0.625rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  background-color: var(--light-color);
+  color: var(--gray-800);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  transition: var(--transition);
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.tickets-list {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.bulk-actions {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray-800);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  margin-top: 1.5rem;
+}
+
+.bulk-actions.show {
+  display: flex;
+}
+
+.bulk-actions span {
+  font-weight: 500;
+}
+
+.bulk-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.bulk-buttons .btn-outline {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.bulk-buttons .btn-outline:hover {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Create Ticket Page Styles */
+.create-ticket-container {
+  padding: 2rem;
+  background-color: var(--gray-100);
+  min-height: calc(100vh - 70px);
+}
+
+.page-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.page-header h2 {
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ticket-form {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.form-section {
+  padding: 2rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.form-section:last-child {
+  border-bottom: none;
+}
+
+.form-section h3 {
+  margin-bottom: 1.5rem;
+  color: var(--gray-800);
+  font-size: 1.25rem;
+}
+
+.form-actions {
+  padding: 1.5rem 2rem;
+  background-color: var(--gray-100);
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* Team Page Styles */
+.team-hero {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.team-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.team-hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.team-section {
+  padding: 5rem 1.5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-member {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.member-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.member-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.social-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+}
+
+.team-member:hover .social-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.social-overlay a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.social-overlay a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.member-info {
+  padding: 1.5rem;
+}
+
+.member-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--gray-900);
+}
+
+.member-title {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.member-bio {
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
+}
+
+.member-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.member-skills span {
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.team-values {
+  background-color: var(--gray-100);
+  padding: 5rem 1.5rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.value-card h3 {
+  margin-bottom: 1rem;
+  color: var(--gray-900);
+}
+
+.value-card p {
+  color: var(--gray-600);
+}
+
+.join-team {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.join-team-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.join-team h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
