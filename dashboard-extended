@@ -1,0 +1,116 @@
+/* Additional Dashboard Styles */
+
+/* Settings Section Styles */
+.settings-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.settings-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.settings-menu {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.settings-menu li {
+  padding: 0.875rem 1.25rem;
+  display: flex;
+  align-items: center;
+  color: var(--gray-700);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border-left: 3px solid transparent;
+}
+
+.settings-menu li i {
+  margin-right: 0.75rem;
+  font-size: 1.125rem;
+  width: 1.25rem;
+  text-align: center;
+}
+
+.settings-menu li:hover {
+  background-color: var(--gray-100);
+  color: var(--primary-color);
+}
+
+.settings-menu li.active {
+  background-color: rgba(79, 70, 229, 0.1);
+  color: var(--primary-color);
+  border-left-color: var(--primary-color);
+}
+
+.settings-content {
+  flex: 1;
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.settings-tab {
+  display: none;
+}
+
+.settings-tab.active {
+  display: block;
+}
+
+.settings-tab h3 {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.5rem;
+}
+
+.avatar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gray-300);
+  transition: var(--transition);
+  border-radius: 34px;
+}
