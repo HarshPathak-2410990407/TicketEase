@@ -1274,3 +1274,123 @@ footer {
   cursor: pointer;
   transition: var(--transition);
 }
+.pagination-number:hover {
+  background-color: var(--gray-200);
+}
+
+.pagination-number.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-card {
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+}
+
+.metric-card h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--gray-700);
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: var(--gray-200);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+.metric-target {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin-bottom: 0;
+}
+
+/* Tickets Page Styles */
+.tickets-container {
+  padding: 2rem;
+  background-color: var(--gray-100);
+  min-height: calc(100vh - 70px);
+}
+
+.tickets-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tickets-header h2 {
+  margin-bottom: 0;
+  color: var(--gray-900);
+}
+
+.tickets-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.filter-section {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.search-box {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--gray-300);
+  border-right: none;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  background-color: var(--light-color);
+  color: var(--gray-800);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.search-box button {
+  padding: 0 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
