@@ -59,81 +59,134 @@
                 </button>
             </div>
         </div>
-  <div class="filter-section">
-            <div class="search-box">
-                <input type="text" id="ticketSearch" placeholder="Search tickets...">
-                <button id="searchBtn"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="filters">
-                <div class="filter-group">
-                    <label for="statusFilter">Status:</label>
-                    <select id="statusFilter">
-                        <option value="all">All</option>
-                        <option value="open">Open</option>
-                        <option value="in-progress">In Progress</option>
-                        <option value="resolved">Resolved</option>
-                        <option value="closed">Closed</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="priorityFilter">Priority:</label>
-                    <select id="priorityFilter">
-                        <option value="all">All</option>
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                        <option value="critical">Critical</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="categoryFilter">Category:</label>
-                    <select id="categoryFilter">
-                        <option value="all">All</option>
-                        <option value="technical">Technical</option>
-                        <option value="billing">Billing</option>
-                        <option value="feature">Feature Request</option>
-                        <option value="general">General Inquiry</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="assigneeFilter">Assignee:</label>
-                    <select id="assigneeFilter">
-                        <option value="all">All</option>
-                        <option value="unassigned">Unassigned</option>
-                        <option value="me">Assigned to Me</option>
-                        <option value="team">My Team</option>
-                    </select>
-                </div>
-                <button class="btn btn-secondary" id="applyFilters">Apply Filters</button>
-                <button class="btn btn-outline" id="clearFilters">Clear</button>
+
+      c
+                <button id="nextPage" class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
 
-        <div class="tickets-list">
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th><input type="checkbox" id="selectAllTickets"></th>
-                            <th>ID <i class="fas fa-sort"></i></th>
-                            <th>Subject <i class="fas fa-sort"></i></th>
-                            <th>Status <i class="fas fa-sort"></i></th>
-                            <th>Priority <i class="fas fa-sort"></i></th>
-                            <th>Category <i class="fas fa-sort"></i></th>
-                            <th>Created <i class="fas fa-sort"></i></th>
-                            <th>Assignee <i class="fas fa-sort"></i></th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="ticketsTableBody">
-                        <!-- Tickets will be loaded here -->
-                    </tbody>
-                </table>
+        <div class="bulk-actions" id="bulkActions">
+            <span>3 tickets selected</span>
+            <div class="bulk-buttons">
+                <button class="btn btn-outline" id="bulkAssign">
+                    <i class="fas fa-user-plus"></i> Assign
+                </button>
+                <button class="btn btn-outline" id="bulkStatus">
+                    <i class="fas fa-exchange-alt"></i> Change Status
+                </button>
+                <button class="btn btn-outline" id="bulkPriority">
+                    <i class="fas fa-flag"></i> Change Priority
+                </button>
+                <button class="btn btn-danger" id="bulkDelete">
+                    <i class="fas fa-trash"></i> Delete
+                </button>
             </div>
-            <div class="pagination">
-                <button id="prevPage" class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
-                <div id="paginationNumbers" class="pagination-numbers">
-                    <button class="pagination-number active">1</button>
-                    <button class="pagination-number">2</button>
-                    <button class="pagination-number">3</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Ticket<span>Ease</span></h2>
+                <p>Simplifying support one ticket at a time</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tickets.html">Tickets</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                    </ul>
                 </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@ticketease.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Support Street, Tech City</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 TicketEase. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <p class="modal-footer">Don't have an account? <a href="#" id="switchToRegister">Register</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <p class="modal-footer">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="ticketViewModal">
+        <div class="modal-content modal-large">
+            <span class="close-modal">&times;</span>
+            <div id="ticketDetails">
+                <!-- Ticket details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/tickets.js"></script>
+</body>
+</html>
