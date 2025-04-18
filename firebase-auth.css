@@ -366,4 +366,183 @@
 .loading-spinner.active {
   display: flex;
 }
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(79, 70, 229, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Email verification banner */
+.email-verification-banner {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  position: relative;
+}
+
+.email-verification-banner .banner-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.email-verification-banner i {
+  color: #856404;
+  font-size: 1.25rem;
+}
+
+.email-verification-banner p {
+  margin: 0;
+  color: #856404;
+}
+
+.email-verification-banner a {
+  color: #856404;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.email-verification-banner .close-banner {
+  background: none;
+  border: none;
+  color: #856404;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode support */
+body.dark-mode .auth-container {
+  background-color: var(--dark-bg);
+  background-image: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+}
+
+body.dark-mode .auth-card {
+  background-color: var(--dark-card-bg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .auth-tabs {
+  background-color: var(--dark-accent-bg);
+  border-bottom-color: var(--gray-700);
+}
+
+body.dark-mode .auth-tab {
+  color: var(--gray-400);
+}
+
+body.dark-mode .auth-tab:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .auth-tab.active {
+  background-color: var(--dark-card-bg);
+  color: var(--primary-color);
+}
+
+body.dark-mode .auth-form h2 {
+  color: var(--light-color);
+}
+
+body.dark-mode .auth-form p,
+body.dark-mode .form-group label {
+  color: var(--gray-300);
+}
+
+body.dark-mode .form-group input {
+  background-color: var(--dark-input-bg);
+  border-color: var(--gray-700);
+  color: var(--light-color);
+}
+
+body.dark-mode .form-group input:focus {
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+body.dark-mode .auth-divider {
+  color: var(--gray-400);
+}
+
+body.dark-mode .auth-divider::before,
+body.dark-mode .auth-divider::after {
+  background-color: var(--gray-700);
+}
+
+body.dark-mode .btn-social {
+  background-color: var(--dark-accent-bg);
+  border-color: var(--gray-700);
+  color: var(--gray-300);
+}
+
+body.dark-mode .btn-social:hover {
+  background-color: var(--dark-hover-bg);
+}
+
+body.dark-mode .auth-footer {
+  color: var(--gray-400);
+}
+
+body.dark-mode .loading-spinner {
+  background-color: rgba(30, 30, 30, 0.8);
+}
+
+body.dark-mode .loading-text {
+  color: var(--gray-300);
+}
+
+body.dark-mode .email-verification-banner {
+  background-color: rgba(255, 243, 205, 0.1);
+  border-color: #856404;
+}
+
+body.dark-mode .email-verification-banner p,
+body.dark-mode .email-verification-banner i,
+body.dark-mode .email-verification-banner a,
+body.dark-mode .email-verification-banner .close-banner {
+  color: #ffeeba;
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+  .auth-content {
+    padding: 1.5rem;
+  }
+
+  .social-auth-buttons {
+    flex-direction: column;
+  }
+}
 
